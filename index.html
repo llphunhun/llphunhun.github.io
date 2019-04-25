@@ -340,6 +340,148 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/mybatis缓存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="llphunhun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llphunhun'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/24/mybatis缓存/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-24 11:35:49" itemprop="dateCreated datePublished" datetime="2019-04-24T11:35:49+08:00">2019-04-24</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+  
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/my-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -836,6 +978,293 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
+                <a href="/2019/03/26/[object Object]/" class="post-title-link" itemprop="url">Spring简单入门操作</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-26T00:00:00+08:00">2019-03-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-25 07:59:38" itemprop="dateModified" datetime="2019-04-25T07:59:38+08:00">2019-04-25</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Spring简单入门操作"><a href="#Spring简单入门操作" class="headerlink" title="Spring简单入门操作"></a>Spring简单入门操作</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​    一个web框架，讨论java企业级开发问题。EJB，过于繁琐，要继承类，实现多个多个接口，写多种方法。</p>
+<p>​    为了简化开发工作，构建最早的Spring。获取对象的方式发生极大的改变。</p>
+<p>​    传统java获取对象的方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传统java获取对象的方式：明显的是这是写死的方式。</span></span><br><span class="line"></span><br><span class="line">Girl g = <span class="keyword">new</span> Girl();</span><br></pre></td></tr></table></figure>
+<p>​    Spring作者追求的是轻量级，并且是容器型。即大本分对象应该从容器当中获取，而不是进行Java硬编码。容器：所需要的对象应该是由这个容器提供。</p>
+<p>​    官网：<a href="https://spring.io/" target="_blank" rel="noopener">https://spring.io/</a></p>
+<h2 id="基础技术"><a href="#基础技术" class="headerlink" title="基础技术"></a>基础技术</h2><ul>
+<li>java</li>
+<li>反射</li>
+<li>xml</li>
+<li>xml解析技术</li>
+<li>代理</li>
+<li>大量的设计模式</li>
+</ul>
+<h2 id="基础环境搭建"><a href="#基础环境搭建" class="headerlink" title="基础环境搭建"></a>基础环境搭建</h2><ol>
+<li>添加Spring依赖。</li>
+<li>编写一个Spring的配置文件。</li>
+<li>通过Spring上下文对象，获取获取对象。</li>
+</ol>
+<p>Spring可以学习的模块：</p>
+<ul>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html" target="_blank" rel="noopener">Core technologies</a>: dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP.</li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html" target="_blank" rel="noopener">Testing</a>: mock objects, TestContext framework, Spring MVC Test, <code>WebTestClient</code>.</li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/data-access.html" target="_blank" rel="noopener">Data Access</a>: transactions, DAO support, JDBC, ORM, Marshalling XML.</li>
+<li><a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html" target="_blank" rel="noopener">Spring MVC</a> and <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html" target="_blank" rel="noopener">Spring WebFlux</a> web frameworks.</li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/integration.html" target="_blank" rel="noopener">Integration</a>: remoting, JMS, JCA, JMX, email, tasks, scheduling, cache.</li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/languages.html" target="_blank" rel="noopener">Languages</a>: Kotlin, Groovy, dynamic languages.</li>
+</ul>
+<p>相对于5的官方文档，Spring4的官方文档更加易懂：<a href="https://docs.spring.io/spring/docs/4.3.22.RELEASE/spring-framework-reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring/docs/4.3.22.RELEASE/spring-framework-reference/htmlsingle/</a></p>
+<p>5的官方文档：<a href="https://docs.spring.io/spring/docs/5.1.5.RELEASE/spring-framework-reference/core.html#spring-core" target="_blank" rel="noopener">https://docs.spring.io/spring/docs/5.1.5.RELEASE/spring-framework-reference/core.html#spring-core</a></p>
+<p>依赖：</p>
+<p>理论上我们Spring框架的四个核心都要引进来，但是maven会自动吧依赖包的依赖也给引进来，所以只需要引进来一个<code>spring-context</code>依赖就行。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>配置文件：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        将创建的对象交给Spring容器，在整个文件声明我要什么对象。</span></span><br><span class="line"><span class="comment">        class：java类的全限定名，他是通过全另类名，然后使用反射的技术进行创建的。</span></span><br><span class="line"><span class="comment">        id：ID就是给这个对象在整个应用程序上下文中娶个名字以方便区分。</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Girl"</span> <span class="attr">id</span>=<span class="string">"girl"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>java代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.llp.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Girl</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.llp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.llp.pojo.Girl;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestSpring</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mm</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取上下文对象,Spring声明的修行都可以通过上下文对象进行获取。</span></span><br><span class="line">        ApplicationContext ctx = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        <span class="comment">//通多队形获取girl</span></span><br><span class="line">        Girl g = (Girl) ctx.getBean(<span class="string">"girl"</span>);</span><br><span class="line">        System.out.println(g);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="普通编写VSspring的方式"><a href="#普通编写VSspring的方式" class="headerlink" title="普通编写VSspring的方式"></a>普通编写VSspring的方式</h2><p>​    普通的获取对象的方式，所有对象之间的依赖关系都是在java代码里面维护的，但是很难维护。如果说有替换方案，但是替换又比较困难。</p>
+<p>​    对象产生全部都是在配置文件当中完成的。其实我们想要分析关系，直接在配置文件当中就看出来了。</p>
+<p>核心内容学习：</p>
+<ul>
+<li>IOC（inverse of control，控制反转）也叫DI（依赖注入）</li>
+<li>AOP（面向切面编程）</li>
+</ul>
+<p>IOC概念：</p>
+<p>​    控制反转：什么控制什么，谁反转了谁。</p>
+<p>控制：创建对象，彼此关系的权利。</p>
+<p>控制权在开发人员程序代码当中进行掌控，利用new的方式。</p>
+<p>夺取控制权反转给Spring容器。</p>
+<ul>
+<li>声明要什么。</li>
+<li>spring来进行自己的控制。</li>
+</ul>
+<p>改变了我们编程的方式。</p>
+<p>我们可以有多context.xml文件，但是这些xml文件里面bean标签的id一定不要重复。</p>
+<p>对于spring来说bean的类是单例模式。</p>
+<h2 id="值的注入方式"><a href="#值的注入方式" class="headerlink" title="值的注入方式"></a>值的注入方式</h2><p>值的注入有两种方式：</p>
+<ul>
+<li><p>第一种，setter注入</p>
+<p>​    对应字段要有setter方法才可以完成注入</p>
+<p>​    通过property完成注入</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.llp.pojo.Girl"</span> id=<span class="string">"girl"</span>&gt;</span><br><span class="line">        &lt;property name=<span class="string">"name"</span> value=<span class="string">"王菲"</span>/&gt;</span><br><span class="line">        &lt;property name=<span class="string">"age"</span> value=<span class="string">"18"</span>/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果没有对应的setter方法就会发生如下的抱错：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invalid property 'age' of bean class [com.llp.pojo.Girl]: Bean property 'age' is not writable or has an invalid setter method.</span><br></pre></td></tr></table></figure>
+<p>但是默认是用无参构造器完成对象创建的，如果没有默认的无参构造器，会报一下错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No <span class="keyword">default</span> constructor found; nested exception is java.lang.NoSuchMethodException</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>第二种方式，构造注入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Dog"</span> <span class="attr">id</span>=<span class="string">"dog"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"旺财"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--除了name我们还可以使用index（优先使用后面的构造器），type(入参的数据类型)--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>但是有一个前提，就是要有相应的构造器。</p>
+</li>
+</ul>
+<h2 id="beans元素探讨"><a href="#beans元素探讨" class="headerlink" title="beans元素探讨"></a>beans元素探讨</h2><p>属性探讨：</p>
+<ul>
+<li><p>abstract：bean无法被实例化</p>
+</li>
+<li><p>parent：指定他的符bean是谁，将会继承父bean的所有内容，通过id进行引导。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Girl"</span> <span class="attr">id</span>=<span class="string">"mygirl"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"韩雪"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--&lt;property name="age" value="28"/&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Girl"</span>  <span class="attr">parent</span>=<span class="string">"mygirl"</span> <span class="attr">id</span>=<span class="string">"mygirl3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"33"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>destory-methord：指定这个bean最后销毁的时候一定执行的方法，适合执行清理型的工作，触发条件是bean确实是被销毁才会执行。</p>
+<p>​       容器close会被触法。</p>
+<p>​    refresh也会被触发。</p>
+<p>​    过时的destory也会被触发，只是已经不再推荐使用了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//        ((ClassPathXmlApplicationContext)ctx).close();</span></span><br><span class="line"><span class="comment">//        ((ClassPathXmlApplicationContext) ctx).stop();不会触发</span></span><br><span class="line"><span class="comment">//        ((ClassPathXmlApplicationContext) ctx).refresh();</span></span><br><span class="line"><span class="comment">//        ((ClassPathXmlApplicationContext) ctx).destroy(); 过时操作</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>inite-methord：指定bean的初始化方法，准备性工作。（比如要先连接数据库）</p>
+</li>
+<li><p>name：为bean取个别名，可以通过它一样可以获取到这个类。但是它可以写多个。彼此分割可以用空格，逗号，分号等等。</p>
+</li>
+<li><p>scope：指定范围，默认值为singleton（单例，Spring上下文只有一个实例，注意不是整个应用程序），prototype（原型）。</p>
+</li>
+<li><p>lazy-init：延迟初始化。默认情况下，容器初始化的时候就会立马完成注入。true，初始化延迟（但是还是会注入，但是只是使用的时候才会注入。）。</p>
+<p>直接初始化：应用程序启动会慢一些，但是内存消耗更大。当我们使用bean的时候会快一些。</p>
+<p>延迟初始化：程序启动会快一些，内存消耗更小。使用bean会慢一些。</p>
+</li>
+<li><p>depend-on：依赖bean，如果某一个bean的使用严重依赖于另外一个bean的准备的话，那就可以配置。</p>
+</li>
+<li><p>关于在配置文件当中单独配置我们的别名通过alias标签完成即可。</p>
+</li>
+</ul>
+<p>对于非字面值可以描述的值的问题：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Dog"</span> <span class="attr">id</span>=<span class="string">"dog"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"哮天犬"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.llp.pojo.Girl"</span> <span class="attr">id</span>=<span class="string">"NauntyGirl"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dog"</span> <span class="attr">ref</span>=<span class="string">"dog"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 主要是，有没有一个方法 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们一般通过ref来只想另外一个bean的id。</p>
+<p>Spring文件当中的多个bean是可以相互引用的（被上下文扫描到）。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+  
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/[object Object]/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="llphunhun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llphunhun'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
                 <a href="/2019/03/26/[object Object]/" class="post-title-link" itemprop="url">Mybatisz配置文件详解</a>
               
             
@@ -1054,7 +1483,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1069,7 +1498,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -1084,7 +1515,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>

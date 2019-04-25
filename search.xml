@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F04%2F24%2Fmybatis%E7%BC%93%E5%AD%98%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[my blog]]></title>
     <url>%2F2019%2F04%2F01%2Fmy-blog%2F</url>
     <content type="text"></content>
@@ -19,6 +24,17 @@
       </categories>
       <tags>
         <tag>mybatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring简单入门操作]]></title>
+    <url>%2F2019%2F03%2F26%2F%5Bobject%20Object%5D%2F</url>
+    <content type="text"><![CDATA[Spring简单入门操作简介​ 一个web框架，讨论java企业级开发问题。EJB，过于繁琐，要继承类，实现多个多个接口，写多种方法。 ​ 为了简化开发工作，构建最早的Spring。获取对象的方式发生极大的改变。 ​ 传统java获取对象的方式： 123//传统java获取对象的方式：明显的是这是写死的方式。Girl g = new Girl(); ​ Spring作者追求的是轻量级，并且是容器型。即大本分对象应该从容器当中获取，而不是进行Java硬编码。容器：所需要的对象应该是由这个容器提供。 ​ 官网：https://spring.io/ 基础技术 java 反射 xml xml解析技术 代理 大量的设计模式 基础环境搭建 添加Spring依赖。 编写一个Spring的配置文件。 通过Spring上下文对象，获取获取对象。 Spring可以学习的模块： Core technologies: dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP. Testing: mock objects, TestContext framework, Spring MVC Test, WebTestClient. Data Access: transactions, DAO support, JDBC, ORM, Marshalling XML. Spring MVC and Spring WebFlux web frameworks. Integration: remoting, JMS, JCA, JMX, email, tasks, scheduling, cache. Languages: Kotlin, Groovy, dynamic languages. 相对于5的官方文档，Spring4的官方文档更加易懂：https://docs.spring.io/spring/docs/4.3.22.RELEASE/spring-framework-reference/htmlsingle/ 5的官方文档：https://docs.spring.io/spring/docs/5.1.5.RELEASE/spring-framework-reference/core.html#spring-core 依赖： 理论上我们Spring框架的四个核心都要引进来，但是maven会自动吧依赖包的依赖也给引进来，所以只需要引进来一个spring-context依赖就行。 12345&lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-context&lt;/artifactId&gt; &lt;version&gt;5.1.5.RELEASE&lt;/version&gt;&lt;/dependency&gt; 配置文件： 123456789101112&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"&gt;&lt;!-- 将创建的对象交给Spring容器，在整个文件声明我要什么对象。 class：java类的全限定名，他是通过全另类名，然后使用反射的技术进行创建的。 id：ID就是给这个对象在整个应用程序上下文中娶个名字以方便区分。 --&gt; &lt;bean class="com.llp.pojo.Girl" id="girl"&gt;&lt;/bean&gt;&lt;/beans&gt; java代码： 12345678910111213141516171819202122package com.llp.pojo;public class Girl &#123; private String name; private Integer age; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public Integer getAge() &#123; return age; &#125; public void setAge(Integer age) &#123; this.age = age; &#125;&#125; 1234567891011121314151617package com.llp;import com.llp.pojo.Girl;import org.junit.Test;import org.springframework.context.ApplicationContext;import org.springframework.context.support.ClassPathXmlApplicationContext;public class TestSpring &#123; @Test public void mm() &#123; //获取上下文对象,Spring声明的修行都可以通过上下文对象进行获取。 ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml"); //通多队形获取girl Girl g = (Girl) ctx.getBean("girl"); System.out.println(g); &#125;&#125; 普通编写VSspring的方式​ 普通的获取对象的方式，所有对象之间的依赖关系都是在java代码里面维护的，但是很难维护。如果说有替换方案，但是替换又比较困难。 ​ 对象产生全部都是在配置文件当中完成的。其实我们想要分析关系，直接在配置文件当中就看出来了。 核心内容学习： IOC（inverse of control，控制反转）也叫DI（依赖注入） AOP（面向切面编程） IOC概念： ​ 控制反转：什么控制什么，谁反转了谁。 控制：创建对象，彼此关系的权利。 控制权在开发人员程序代码当中进行掌控，利用new的方式。 夺取控制权反转给Spring容器。 声明要什么。 spring来进行自己的控制。 改变了我们编程的方式。 我们可以有多context.xml文件，但是这些xml文件里面bean标签的id一定不要重复。 对于spring来说bean的类是单例模式。 值的注入方式值的注入有两种方式： 第一种，setter注入 ​ 对应字段要有setter方法才可以完成注入 ​ 通过property完成注入 1234&lt;bean class="com.llp.pojo.Girl" id="girl"&gt; &lt;property name="name" value="王菲"/&gt; &lt;property name="age" value="18"/&gt; &lt;/bean&gt; 如果没有对应的setter方法就会发生如下的抱错： 1Invalid property 'age' of bean class [com.llp.pojo.Girl]: Bean property 'age' is not writable or has an invalid setter method. 但是默认是用无参构造器完成对象创建的，如果没有默认的无参构造器，会报一下错误： 1No default constructor found; nested exception is java.lang.NoSuchMethodException 第二种方式，构造注入 1234&lt;bean class="com.llp.pojo.Dog" id="dog"&gt; &lt;constructor-arg name="name" value="旺财"/&gt;&lt;/bean&gt;&lt;!--除了name我们还可以使用index（优先使用后面的构造器），type(入参的数据类型)--&gt; 但是有一个前提，就是要有相应的构造器。 beans元素探讨属性探讨： abstract：bean无法被实例化 parent：指定他的符bean是谁，将会继承父bean的所有内容，通过id进行引导。 12345678&lt;bean class="com.llp.pojo.Girl" id="mygirl"&gt; &lt;property name="name" value="韩雪"/&gt; &lt;!--&lt;property name="age" value="28"/&gt;--&gt;&lt;/bean&gt;&lt;bean class="com.llp.pojo.Girl" parent="mygirl" id="mygirl3"&gt; &lt;property name="age" value="33"&gt;&lt;/property&gt;&lt;/bean&gt; destory-methord：指定这个bean最后销毁的时候一定执行的方法，适合执行清理型的工作，触发条件是bean确实是被销毁才会执行。 ​ 容器close会被触法。 ​ refresh也会被触发。 ​ 过时的destory也会被触发，只是已经不再推荐使用了。 1234// ((ClassPathXmlApplicationContext)ctx).close();// ((ClassPathXmlApplicationContext) ctx).stop();不会触发// ((ClassPathXmlApplicationContext) ctx).refresh();// ((ClassPathXmlApplicationContext) ctx).destroy(); 过时操作 inite-methord：指定bean的初始化方法，准备性工作。（比如要先连接数据库） name：为bean取个别名，可以通过它一样可以获取到这个类。但是它可以写多个。彼此分割可以用空格，逗号，分号等等。 scope：指定范围，默认值为singleton（单例，Spring上下文只有一个实例，注意不是整个应用程序），prototype（原型）。 lazy-init：延迟初始化。默认情况下，容器初始化的时候就会立马完成注入。true，初始化延迟（但是还是会注入，但是只是使用的时候才会注入。）。 直接初始化：应用程序启动会慢一些，但是内存消耗更大。当我们使用bean的时候会快一些。 延迟初始化：程序启动会快一些，内存消耗更小。使用bean会慢一些。 depend-on：依赖bean，如果某一个bean的使用严重依赖于另外一个bean的准备的话，那就可以配置。 关于在配置文件当中单独配置我们的别名通过alias标签完成即可。 对于非字面值可以描述的值的问题： 123456789&lt;bean class="com.llp.pojo.Dog" id="dog"&gt; &lt;property name="name" value="哮天犬"/&gt;&lt;/bean&gt;&lt;bean class="com.llp.pojo.Girl" id="NauntyGirl"&gt; &lt;property name="dog" ref="dog"/&gt;&lt;/bean&gt;&lt;!-- 主要是，有没有一个方法 --&gt; 我们一般通过ref来只想另外一个bean的id。 Spring文件当中的多个bean是可以相互引用的（被上下文扫描到）。]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
